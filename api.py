@@ -22,8 +22,8 @@ class ProxyAPI(Resource):
         headers = {'User-Agent': request.headers['User-Agent']}
         data = request.form
         response = post(target_url, data=data, headers=headers)
-        print(response.text)
-        return response.status_code
+        #print(response.text)
+        return response
 
 
 api.add_resource(ProxyAPI, '/proxy/<path:target_url>', endpoint = 'proxy_ep')
