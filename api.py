@@ -16,14 +16,14 @@ api = Api(app)
 
 class ProxyAPI(Resource):
     def get(self, target_url):
-        return get(target_url).json()
+        response = get(target_url)
+        return response.text
 
     def post(self, target_url):
         headers = {'User-Agent': request.headers['User-Agent']}
         data = request.form
         response = post(target_url, data=data, headers=headers)
-        #print(response.text)
-        return response
+        return response.text
 
 
 api.add_resource(ProxyAPI, '/proxy/<path:target_url>', endpoint = 'proxy_ep')
