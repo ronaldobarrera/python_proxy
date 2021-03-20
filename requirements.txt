@@ -6,7 +6,7 @@ flask==1.0.2
 -e git+https://github.com/flask-restful/flask-restful.git@b47780a793237e6915a82cde267d25efee238f0e#egg=Flask_RESTful
 idna==2.8
 itsdangerous==1.1.0
-jinja2==2.10
+jinja2==2.11.3
 markupsafe==1.1.0
 pytz==2018.9
 requests==2.21.0
